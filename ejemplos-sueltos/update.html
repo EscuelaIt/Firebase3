@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3 test update</title>
+</head>
+<body>
+  
+  <div id="mensaje"></div>
+
+  <button id="set">set</button>
+  <button id="update">update</button>
+  <button id="updatecopyleft">Ejercicio update copyleft</button>
+
+
+  <script src="../bower_components/firebase/firebase.js"></script>  
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXhHDjuVSDHQxdRhc_CRwjtTzQNhV_6Mw",
+      authDomain: "fir-3-curso.firebaseapp.com",
+      databaseURL: "https://fir-3-curso.firebaseio.com",
+      storageBucket: "fir-3-curso.appspot.com",
+      messagingSenderId: "496003402473"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script> 
+  var db = firebase.database();
+  var ref = db.ref('test');
+  ref.set({
+    appName: "Cajón Desastre",
+    appUrl: "http://cajondesastre.info",
+    license: {
+      type: "copyright",
+      year:  2016
+    }
+  });
+
+  $("#set").on('click', function() {
+    ref.set({
+      admin: "yo@escuela.it",
+      appName: "Mi Cajón"
+    })
+  });
+
+  $("#update").on('click', function() {
+    ref.update({
+      admin: "yo@escuela.it",
+      appName: "Mi Cajón"
+    })
+  });
+
+  $("#updatecopyleft").on('click', function() {
+    ref.update({
+      license: {
+        type: "copyleft"
+      }
+    });
+  });
+  </script>
+</body>
+</html>

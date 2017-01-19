@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3 colecciones</title>
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+  <div class="contenido">
+    <header>
+      <img src="images/logo-firebase.png" alt="Firebase 3" width="190" height="62">
+      <img src="images/user-icon.png" alt="Login" width="50" height="50" id="usericon">      
+      <img src="images/salir.png" alt="Logout" width="50" height="50" id="logouticon">      
+    </header>
+    <div class="caja">
+      <p class="titular">
+        <span id="preg"></span>
+        <img src="images/up.png" alt="Colapsar encuesta" width="24" height="24" id="up">
+        <img src="images/down.png" alt="Mostrar encuesta" width="24" height="24" id="down">
+      </p>
+      <section class="encuesta" id="formrespuesta">
+        <input type="hidden" id="inputeditarid">
+        <p>
+          Valor:
+          <br>
+          <input type="text" id="inputvalor">
+        </p>
+        <p>
+          Respuesta:
+          <br>
+          <input type="text" id="inputrespuesta">
+        </p>
+        <p>
+          <div class="boton" id="guardarrespuesta">Guardar</div>
+        </p>
+      </section>
+    </div>
+  
+    <div id="resultados">
+      <div class="titular">
+        Valores de la encuesta
+      </div>
+      <div>
+        <p>Pregunta: <span id="nombre"></span></p>
+        <p>Descripción: <span id="descripcion"></span></p>
+      </div>
+    </div>
+
+    <ul id="respuestas"></ul>
+  </div>
+  <div id="mensaje"></div>
+
+
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXhHDjuVSDHQxdRhc_CRwjtTzQNhV_6Mw",
+      authDomain: "fir-3-curso.firebaseapp.com",
+      databaseURL: "https://fir-3-curso.firebaseio.com",
+      storageBucket: "fir-3-curso.appspot.com",
+      messagingSenderId: "496003402473"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/funciones.js"></script>
+  
+  <script>
+    // Accedo al servicio de la base de datos
+    var database = firebase.database();
+
+    // guardamos un elemento en la colección
+    $('#guardarrespuesta').on('click', function() {
+      var objRespuesta = {
+        respuesta: $('#inputrespuesta').val(),
+        valor: $('#inputvalor').val()
+      };
+      var ref = database.ref('respuestas');
+      ref.push(objRespuesta)
+        .then(function() {
+          mensajeFeedback('creado el elemento');
+        })
+        .catch(function() {
+          mensajeFeedback('Error al crear el elemento');
+        });
+    });
+
+    // cada vez que se añade un elemento a la colección
+    var ref = database.ref('respuestas');
+    ref.on('child_added', function(ss) {
+      var respuesta = ss.val();
+      var elem = $('<li>');
+      elem.text(respuesta.valor + ": " + respuesta.respuesta);
+      $('#respuestas').append(elem);
+    });
+
+    // cada vez que cambia un elemento en la colección
+    ref.on('child_changed', function(ss) {
+      var respuesta = ss.val();
+      console.log('el elemento cambió a', respuesta);
+    });
+  </script>
+
+</body>
+</html>

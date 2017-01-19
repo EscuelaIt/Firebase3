@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3</title>
+</head>
+<body>
+
+  <div id="mensaje"></div>
+
+  <button id="getarray">Recibir el array</button>
+  <button id="setcoleccion">Setea una colección</button>
+  <button id="setcoleccion2">Setea una indices incrementales</button>
+
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXhHDjuVSDHQxdRhc_CRwjtTzQNhV_6Mw",
+      authDomain: "fir-3-curso.firebaseapp.com",
+      databaseURL: "https://fir-3-curso.firebaseio.com",
+      storageBucket: "fir-3-curso.appspot.com",
+      messagingSenderId: "496003402473"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+  var db = firebase.database();
+
+  var ref = db.ref('testArray');
+  var entreSemana = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes'];
+  ref.set(entreSemana);
+
+  $("#getarray").on('click', function() {
+    ref.on('value', function(ss) {
+      console.log(ss.val());
+    });
+  });
+  $("#setcoleccion").on('click', function() {
+    ref.set({
+      '0': 'lunes',
+      '1': 'martes',
+      '2': 'x',
+    });
+  });
+  $("#setcoleccion2").on('click', function() {
+    ref.set({
+      '1': 'lunes',
+      '4': 'martes',
+      '6': 'x',
+    });
+  });
+  </script>
+</body>
+</html>
