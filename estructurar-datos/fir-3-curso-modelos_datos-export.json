@@ -1,0 +1,565 @@
+{
+  "cursos" : {
+    "propuesta1" : {
+      "cursos" : {
+        "curso1" : {
+          "clases" : {
+            "-K849quYZG-ZvnV6OwZr" : {
+              "date" : "2016-01-14",
+              "description" : "Primera clase de apoyo de AngularJS: controladores, modelos, directivas",
+              "title" : "Iniciación al framework AngularJS"
+            },
+            "-K86LiqFZ62jTRXHdSIL" : {
+              "date" : "2016-01-15",
+              "description" : "En esta clase vimos y practicamos con varios componentes fundamentales de AngularJS, como son las vistas y las factorías.",
+              "title" : "Inyección de dependencias, vistas y factorías"
+            },
+            "-K8aMx9j78V7rG0ifaNL" : {
+              "date" : "2016-01-21",
+              "description" : "$http para Ajax y acceso a recursos que nos ofrece un servicio web por medio del estándar REST",
+              "title" : "Ajax, API REST AngularJS"
+            }
+          },
+          "estudiantes" : {
+            "3ce38289-3123-4064-887f-b7ce62c85330" : true,
+            "51523f1d-ecd3-4fb9-bbda-5600be29532e" : true,
+            "c77753ae-c555-4d37-9e41-a893f0df0a9a" : true
+          },
+          "informacion" : "Curso de AngularJS, el popular framework Javascript",
+          "nombre" : "Curso de AngularJS"
+        },
+        "curso2" : {
+          "clases" : {
+            "-K8550ZRkh7up3rbfpzR" : {
+              "date" : "2016-01-14",
+              "description" : "El documento básico HTML, primeras etiquetas",
+              "title" : "Documento básico"
+            },
+            "-K8ONoKQ7mBDbQkIjJZI" : {
+              "date" : "2016-01-18",
+              "description" : "Segunda clase de HTML, listas y tablas",
+              "title" : "Listas y tablas"
+            }
+          },
+          "estudiantes" : {
+            "3ce38289-3123-4064-887f-b7ce62c85330" : true,
+            "c77753ae-c555-4d37-9e41-a893f0df0a9a" : true
+          },
+          "informacion" : "Curso básico a avanzado de HTML",
+          "nombre" : "Curso de HTML"
+        },
+        "curso3" : {
+          "clases" : {
+            "-K8550ZRkh7up3rbfpzR" : {
+              "date" : "2016-02-14",
+              "description" : "Conocimientos esenciales de SEO",
+              "title" : "SEO básico"
+            },
+            "-K8ONoKQ7mBDbQkIjJZI" : {
+              "date" : "2016-02-18",
+              "description" : "Qué es SEO on Page, como hacer una página fácilmente posicionable",
+              "title" : "SEO on Page"
+            }
+          },
+          "estudiantes" : {
+            "3ce38289-3123-4064-887f-b7ce62c85330" : true,
+            "c77753ae-c555-4d37-9e41-a893f0df0a9a" : true,
+            "c77753ae-c555-4d37-9e41-a893f0df4444" : true
+          },
+          "informacion" : "Posicionamiento en buscadores desde cero",
+          "nombre" : "SEO desde cero"
+        }
+      }
+    },
+    "propuesta2" : {
+      "clases" : {
+        "curso1" : {
+          "-K849quYZG-ZvnV6OwZr" : {
+            "date" : "2016-01-14",
+            "description" : "Primera clase de apoyo de AngularJS: controladores, modelos, directivas",
+            "title" : "Iniciación al framework AngularJS"
+          },
+          "-K86LiqFZ62jTRXHdSIL" : {
+            "date" : "2016-01-15",
+            "description" : "En esta clase vimos y practicamos con varios componentes fundamentales de AngularJS, como son las vistas y las factorías.",
+            "title" : "Inyección de dependencias, vistas y factorías"
+          },
+          "-K8aMx9j78V7rG0ifaNL" : {
+            "date" : "2016-01-21",
+            "description" : "$http para Ajax y acceso a recursos que nos ofrece un servicio web por medio del estándar REST",
+            "title" : "Ajax, API REST AngularJS"
+          }
+        },
+        "curso2" : {
+          "-K8550ZRkh7up3rbfpzR" : {
+            "date" : "2016-01-14",
+            "description" : "El documento básico HTML, primeras etiquetas",
+            "title" : "Documento básico"
+          },
+          "-K8ONoKQ7mBDbQkIjJZI" : {
+            "date" : "2016-01-18",
+            "description" : "Segunda clase de HTML, listas y tablas",
+            "title" : "Listas y tablas"
+          }
+        },
+        "curso3" : {
+          "-K8550ZRkh7up3rbfpzR" : {
+            "date" : "2016-02-14",
+            "description" : "Conocimientos esenciales de SEO",
+            "title" : "SEO básico"
+          },
+          "-K8ONoKQ7mBDbQkIjJZI" : {
+            "date" : "2016-02-18",
+            "description" : "Qué es SEO on Page, como hacer una página fácilmente posicionable",
+            "title" : "SEO on Page"
+          }
+        }
+      },
+      "cursos" : {
+        "curso1" : {
+          "informacion" : "Curso de AngularJS, el popular framework Javascript",
+          "nombre" : "Curso de AngularJS"
+        },
+        "curso2" : {
+          "informacion" : "Curso básico a avanzado de HTML",
+          "nombre" : "Curso de HTML"
+        },
+        "curso3" : {
+          "informacion" : "Posicionamiento en buscadores desde cero",
+          "nombre" : "SEO desde cero"
+        }
+      },
+      "estudiantes" : {
+        "curso1" : {
+          "3ce38289-3123-4064-887f-b7ce62c85330" : true,
+          "51523f1d-ecd3-4fb9-bbda-5600be29532e" : true,
+          "c77753ae-c555-4d37-9e41-a893f0df0a9a" : true
+        },
+        "curso2" : {
+          "3ce38289-3123-4064-887f-b7ce62c85330" : true,
+          "c77753ae-c555-4d37-9e41-a893f0df0a9a" : true
+        },
+        "curso3" : {
+          "3ce38289-3123-4064-887f-b7ce62c85330" : true,
+          "c77753ae-c555-4d37-9e41-a893f0df0a9a" : true,
+          "c77753ae-c555-4d37-9e41-a893f0df4444" : true
+        }
+      },
+      "usuarios" : {
+        "0owH4289-3123-4064-887f-b7ce62cdkwjw" : {
+          "apellidos" : "Moreno",
+          "email" : "alfil@moreno.es",
+          "nombre" : "Alfil"
+        },
+        "13Sdgg89-3123-4064-887f-b7ce62cdF4" : {
+          "apellidos" : "Gonzalves",
+          "email" : "bento@rs.com.br",
+          "nombre" : "Bento"
+        },
+        "3ce38289-3123-4064-887f-b7ce62c85330" : {
+          "apellidos" : "Gonzalez",
+          "email" : "alberto@desarrolloweb.com",
+          "nombre" : "Alberto"
+        },
+        "51523f1d-ecd3-4fb9-bbda-5600be29532e" : {
+          "apellidos" : "Pilastras",
+          "email" : "pilar@pilastras.com",
+          "nombre" : "Pilar"
+        },
+        "66yG4289-3123-4064-887f-b7ce62cdkAAsd" : {
+          "apellidos" : "Silva",
+          "email" : "de.marcos@silva.com",
+          "nombre" : "Marcos"
+        },
+        "9dke2289-3123-4064-887f-aaae62c85294" : {
+          "apellidos" : "García",
+          "email" : "yo@garcia.com",
+          "nombre" : "Joaquín"
+        },
+        "DswT4289-3123-4064-887f-b7ce62cdllai" : {
+          "apellidos" : "Leal",
+          "email" : "torpedo@leal.com",
+          "nombre" : "Oscar"
+        },
+        "Fes71289-3123-4064-887f-b7ce62c092e4" : {
+          "apellidos" : "Filho",
+          "email" : "leila@leila.com",
+          "nombre" : "Leila"
+        },
+        "Mvkj4289-3123-4064-887f-b7ce62cssa33" : {
+          "apellidos" : "Rovira",
+          "email" : "carlos@ro.com",
+          "nombre" : "Carlos"
+        },
+        "aAqaA289-3123-4064-887f-b7ce62cd22sS" : {
+          "apellidos" : "Genarez",
+          "email" : "genaro@genarez.com",
+          "nombre" : "Genaro"
+        },
+        "c77753ae-c555-4d37-9e41-a893f0df0a9a" : {
+          "apellidos" : "Pelotas",
+          "email" : "pepe@pepe.com",
+          "nombre" : "Pepe"
+        },
+        "c77753ae-c555-4d37-9e41-a893f0df4444" : {
+          "apellidos" : "Alarcón",
+          "email" : "yo@gmail.com",
+          "nombre" : "Santiago"
+        },
+        "e0o1289-3123-4064-887f-b7ce62cdES" : {
+          "apellidos" : "Valdir",
+          "emal" : "diego@valdir.com",
+          "nombre" : "Diego"
+        },
+        "g3W55289-3123-4064-887f-b7ce62cdkh554" : {
+          "apellidos" : "Bárcenas",
+          "email" : "ty@uuy.bom",
+          "nombre" : "Lucas"
+        },
+        "pap1q289-3123-4064-887f-b7ce62c8aoem" : {
+          "apellidos" : "Martínez",
+          "email" : "julia@hotmail.com",
+          "nombre" : "Julia"
+        }
+      },
+      "usuariosSuscritos" : {
+        "3ce38289-3123-4064-887f-b7ce62c85330" : {
+          "curso1" : true,
+          "curso2" : true,
+          "curso3" : true
+        },
+        "51523f1d-ecd3-4fb9-bbda-5600be29532e" : {
+          "curso1" : true
+        },
+        "c77753ae-c555-4d37-9e41-a893f0df0a9a" : {
+          "curso1" : true,
+          "curso2" : true,
+          "curso3" : true
+        },
+        "c77753ae-c555-4d37-9e41-a893f0df4444" : {
+          "curso3" : true
+        }
+      }
+    }
+  },
+  "faq" : {
+    "propuesta1" : {
+      "preguntas" : {
+        "pregunta1" : {
+          "ampliacion" : "Es un tema muy peliagudo",
+          "categorias" : {
+            "aborto" : true,
+            "animales" : true,
+            "naturaleza" : true
+          },
+          "pregunta" : "¿Qué opinas del aborto de la gallina?",
+          "respuestas" : {
+            "respuesta1" : {
+              "respuesta" : "Es su derecho",
+              "votos" : 1
+            },
+            "respuesta2" : {
+              "respuesta" : "Pregúntale a sus pollitos",
+              "votos" : 5
+            },
+            "respuesta3" : {
+              "respuesta" : "Solo abortan los mamiferos",
+              "votos" : 3
+            }
+          },
+          "timestamp" : 1000002
+        },
+        "pregunta2" : {
+          "ampliacion" : "Es que realmente no sabemos si reciclan la basura que colectamos para reciclaje",
+          "categorias" : {
+            "reciclaje" : true
+          },
+          "pregunta" : "¿Donde van a parar los materiales de reciclaje?",
+          "respuestas" : {
+            "res1" : {
+              "respuesta" : "Van a parar a centros de reciclaje",
+              "votos" : 3
+            },
+            "res2" : {
+              "respuesta" : "Una vez le puse un chip de seguimiento y...",
+              "votos" : 1
+            }
+          },
+          "timestamp" : 1000004
+        },
+        "pregunta3" : {
+          "ampliacion" : "Siempre quise saberlo",
+          "categorias" : {
+            "bebes" : true,
+            "naturaleza" : true
+          },
+          "pregunta" : "Por donde salen los niños al nacer",
+          "respuestas" : {
+            "r1" : {
+              "respuesta" : "Se abre la barriga de la mamá",
+              "votos" : 6
+            },
+            "r2" : {
+              "respuesta" : "Salen por la vagina",
+              "votos" : 2
+            },
+            "r3" : {
+              "respuesta" : "Son muy jóvenes para salir por las discotecas",
+              "votos" : 1
+            }
+          },
+          "timestamp" : 1000003
+        }
+      }
+    },
+    "propuesta2" : {
+      "preguntas" : {
+        "pregunta1" : {
+          "ampliacion" : "Es un tema muy peliagudo",
+          "categorias" : {
+            "aborto" : true,
+            "animales" : true
+          },
+          "pregunta" : "¿Qué opinas del aborto de la gallina?",
+          "timestamp" : 1000002
+        },
+        "pregunta2" : {
+          "ampliacion" : "Es que realmente no sabemos si reciclan la basura que colectamos para reciclaje",
+          "categorias" : {
+            "reciclaje" : true
+          },
+          "pregunta" : "¿Donde van a parar los materiales de reciclaje?",
+          "timestamp" : 1000004
+        },
+        "pregunta3" : {
+          "ampliacion" : "Siempre quise saberlo",
+          "categorias" : {
+            "bebes" : true,
+            "naturaleza" : true
+          },
+          "pregunta" : "Por donde salen los niños al nacer",
+          "timestamp" : 1000003
+        }
+      },
+      "respuestas" : {
+        "pregunta1" : {
+          "respuesta1" : {
+            "respuesta" : "Es su derecho",
+            "votos" : 1
+          },
+          "respuesta2" : {
+            "respuesta" : "Pregúntale a sus pollitos",
+            "votos" : 5
+          },
+          "respuesta3" : {
+            "respuesta" : "Solo abortan los mamiferos",
+            "votos" : 3
+          }
+        },
+        "pregunta2" : {
+          "res1" : {
+            "respuesta" : "Van a parar a centros de reciclaje",
+            "votos" : 3
+          },
+          "res2" : {
+            "respuesta" : "Una vez le puse un chip de seguimiento y...",
+            "votos" : 1
+          }
+        },
+        "pregunta3" : {
+          "r1" : {
+            "respuesta" : "Se abre la barriga de la mamá",
+            "votos" : 6
+          },
+          "r2" : {
+            "respuesta" : "Salen por la vagina",
+            "votos" : 2
+          },
+          "r3" : {
+            "respuesta" : "Son muy jóvenes para salir por las discotecas",
+            "votos" : 1
+          }
+        }
+      }
+    },
+    "propuesta3" : {
+      "categorias" : {
+        "aborto" : {
+          "pregunta1" : true
+        },
+        "animales" : {
+          "pregunta1" : true,
+          "pregunta4" : true,
+          "pregunta6" : true
+        },
+        "bebes" : {
+          "pregunta3" : true,
+          "pregunta4" : true
+        },
+        "biología" : {
+          "pregunta1" : true,
+          "pregunta3" : true,
+          "pregunta6" : true
+        },
+        "granja" : {
+          "pregunta1" : true
+        },
+        "mar" : {
+          "pregunta6" : true
+        },
+        "materiales" : {
+          "pregunta2" : true
+        },
+        "naturaleza" : {
+          "pregunta1" : true,
+          "pregunta3" : true
+        },
+        "reciclaje" : {
+          "pregunta2" : true,
+          "pregunta5" : true
+        },
+        "veterinaria" : {
+          "pregunta4" : true
+        }
+      },
+      "preguntas" : {
+        "pregunta1" : {
+          "ampliacion" : "Es un tema muy peliagudo",
+          "categorias" : {
+            "aborto" : true,
+            "animales" : true,
+            "biología" : true,
+            "granja" : true
+          },
+          "pregunta" : "¿Qué opinas del aborto de la gallina?",
+          "timestamp" : 1000002
+        },
+        "pregunta2" : {
+          "ampliacion" : "Es que realmente no sabemos si reciclan la basura que colectamos para reciclaje",
+          "categorias" : {
+            "materiales" : true,
+            "reciclaje" : true
+          },
+          "pregunta" : "¿Donde van a parar los materiales de reciclaje?",
+          "timestamp" : 1000004
+        },
+        "pregunta3" : {
+          "ampliacion" : "Siempre quise saberlo",
+          "categorias" : {
+            "bebes" : true,
+            "biología" : true,
+            "naturaleza" : true
+          },
+          "pregunta" : "Por donde salen los niños al nacer",
+          "timestamp" : 1000003
+        },
+        "pregunta4" : {
+          "ampliacion" : "En el parque los vi",
+          "categorias" : {
+            "animales" : true,
+            "bebes" : true,
+            "veterinaria" : true
+          },
+          "pregunta" : "¿Cuál es el nombre del ciervo recién nacido?",
+          "timestamp" : 1000006
+        },
+        "pregunta5" : {
+          "ampliacion" : "He escuchado que no",
+          "categorias" : {
+            "reciclaje" : true
+          },
+          "pregunta" : "¿Se puede reciclar el corcho blanco (Poliestireno expandido, isopor)?",
+          "timestamp" : 1000005
+        },
+        "pregunta6" : {
+          "ampliacion" : "Es que no entiendo cómo pueden respirar debajo del agua",
+          "categorias" : {
+            "animales" : true,
+            "biología" : true,
+            "mar" : true
+          },
+          "pregunta" : "¿La ballena es un mamífero?",
+          "timestamp" : 1000000
+        }
+      },
+      "respuestas" : {
+        "pregunta1" : {
+          "respuesta1" : {
+            "respuesta" : "Es su derecho",
+            "votos" : 1
+          },
+          "respuesta2" : {
+            "respuesta" : "Pregúntale a sus pollitos",
+            "votos" : 5
+          },
+          "respuesta3" : {
+            "respuesta" : "Solo abortan los mamiferos",
+            "votos" : 3
+          }
+        },
+        "pregunta2" : {
+          "res1" : {
+            "respuesta" : "Van a parar a centros de reciclaje",
+            "votos" : 3
+          },
+          "res2" : {
+            "respuesta" : "Una vez le puse un chip de seguimiento y...",
+            "votos" : 1
+          }
+        },
+        "pregunta3" : {
+          "r1" : {
+            "respuesta" : "Se abre la barriga de la mamá",
+            "votos" : 6
+          },
+          "r2" : {
+            "respuesta" : "Salen por la vagina",
+            "votos" : 2
+          },
+          "r3" : {
+            "respuesta" : "Son muy jóvenes para salir por las discotecas",
+            "votos" : 1
+          }
+        },
+        "pregunta4" : {
+          "re1" : {
+            "respuesta" : "Ciervito",
+            "votos" : 4
+          },
+          "re2" : {
+            "respuesta" : "Cervatillo",
+            "votos" : 7
+          },
+          "re3" : {
+            "respuesta" : "Venado",
+            "votos" : 3
+          }
+        },
+        "pregunta5" : {
+          "r1" : {
+            "respuesta" : "Sí",
+            "votos" : 19
+          },
+          "r2" : {
+            "respuesta" : "No",
+            "votos" : 12
+          }
+        },
+        "pregunta6" : {
+          "rs1" : {
+            "respuesta" : "Sí, respira saliendo a la superficie",
+            "votos" : 3
+          },
+          "rs2" : {
+            "respuesta" : "Si, pero puede respirar dentro del agua",
+            "votos" : 0
+          },
+          "rs3" : {
+            "respuesta" : "No, es un pez",
+            "votos" : 2
+          }
+        }
+      }
+    }
+  }
+}
