@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3</title>
+</head>
+<body>
+  
+  <div id="meses"></div>
+
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXhHDjuVSDHQxdRhc_CRwjtTzQNhV_6Mw",
+      authDomain: "fir-3-curso.firebaseapp.com",
+      databaseURL: "https://fir-3-curso.firebaseio.com",
+      storageBucket: "fir-3-curso.appspot.com",
+      messagingSenderId: "496003402473"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+  
+  var database = firebase.database();
+
+  var ref = database.ref('meses').orderByKey().startAt('J').endAt('J\uf8ff');
+  ref.on('child_added', function(ss) {
+    var dias = ss.val();
+    var mes = ss.key;
+    var elem = document.createElement('p');
+    elem.textContent = mes + ' (' + dias + ')';
+    document.getElementById('meses').appendChild(elem);
+  });
+
+  </script>
+</body>
+</html>

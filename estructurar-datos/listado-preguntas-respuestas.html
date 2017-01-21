@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3</title>
+</head>
+<body>
+  
+  <div id="preguntas"></div>
+
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCXhHDjuVSDHQxdRhc_CRwjtTzQNhV_6Mw",
+      authDomain: "fir-3-curso.firebaseapp.com",
+      databaseURL: "https://fir-3-curso.firebaseio.com",
+      storageBucket: "fir-3-curso.appspot.com",
+      messagingSenderId: "496003402473"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script>
+  
+  var database = firebase.database();
+
+  var ref = database.ref('/modelos_datos/faq/propuesta3/preguntas');
+  ref.on('child_added', function(ss) {
+    var preguntaKey = ss.key;
+    var pregunta = ss.val();
+    var elempregunta = document.createElement('p');
+    elempregunta.textContent = 'Pregunta: ' + pregunta.pregunta;
+    document.getElementById('preguntas').appendChild(elempregunta);
+    //var refRespuestas = database.ref('/modelos_datos/faq/propuesta3/respuestas' + preguntaKey);
+    var refRespuestas = database.ref('/modelos_datos/faq/propuesta3/respuestas').child(preguntaKey);
+    refRespuestas = refRespuestas.orderByChild('votos');
+    refRespuestas.on('child_added', function(ssRes) {
+      var respuesta = ssRes.val();
+      var div = document.createElement('div');
+      div.textContent = respuesta.respuesta;
+      elempregunta.appendChild(div);
+    });
+  });
+
+  </script>
+</body>
+</html>
