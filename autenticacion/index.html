@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3 Autenticación</title>
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+  <div class="contenido">
+    <header>
+      <img src="images/logo-firebase.png" alt="Firebase 3" width="190" height="62">     
+      <img src="images/salir.png" alt="Logout" width="50" height="50" id="logouticon">      
+    </header>
+    <nav>
+      <a href="registro-usuarios.html">Registrarse</a> | 
+      <a href="baja.html">Baja de usuario</a>
+    </nav>
+    <div class="caja">
+      <p class="titular">
+        <span id="preg">Login de usuarios</span>
+        <img src="images/up.png" alt="Colapsar encuesta" width="24" height="24" id="up">
+        <img src="images/down.png" alt="Mostrar encuesta" width="24" height="24" id="down">
+      </p>
+      <section class="encuesta interfazlogin" id="cuerpoencuesta">
+        <div id="formulariopassword">
+          <p>
+            Email:
+            <br>
+            <input type="text" id="emailinput" value="miguel@alvarezsanchez.com">
+          </p>
+          <p>
+            Password:
+            <br>
+            <input type="text" id="passwordinput">
+            <a href="recordar-clave.html" class="recordar">Recordar clave</a>
+          </p>
+          <div id="login" class="boton">Login</div>
+        </div>
+        <div id="botonesoauth">
+          <div id="logingoogle" class="boton">Login con Google</div>
+          <div id="loginfacebook" class="boton">Login con Facebook</div>
+        </div>
+      </section>
+    </div>
+
+    <div class="bloque" id="datosusuario">
+      <div class="titular">
+        El usuario autenticado
+      </div>
+      <section class="encuesta">
+        <p>
+          Nombre: <span id="username"></span>
+        </p>
+        <p>
+          Email: <span id="useremail"></span>
+        </p>
+      </section>
+    </div>
+    
+    <div class="bloque">
+      <div class="titular">
+        Enlazar cuentas
+      </div>
+      <section class="encuesta">
+        <div id="enlazargoogle" class="boton">Enlazar cuenta Google</div>
+      </section>
+    </div>
+  </div>
+  <div id="mensaje"></div>
+
+
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script src="js/inicializar-firebase.js"></script>
+  <script src="js/funciones.js"></script>
+  <script src="js/database.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/gestion-oauth.js"></script>
+  <script src="js/gestion-password.js"></script>
+  <script src="js/link-accounts.js"></script>
+</body>
+</html>
