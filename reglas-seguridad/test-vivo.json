@@ -1,0 +1,20 @@
+{
+  "rules": {
+    "encuesta": {
+      ".read": "true"
+    },
+    "respuestas": {
+      ".read": "true"
+    },
+    "resultados": {
+      ".read": "true",
+      "$id": {
+        ".write": "auth != null && $id == auth.uid",
+        ".validate": "!data.exists()",
+        "user": {
+          ".validate": "newData.isString() && newData.val().length > 10 && newData.val().length <= 50"
+        },
+      }
+    },
+  }
+}

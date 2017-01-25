@@ -9,17 +9,14 @@
     "resultados": {
       ".read": "true",
       "$id": {
-        ".validate": "newData.hasChildren(['user', 'respuesta'])",
+        ".validate": "newData.exists()",
         "user": {
           ".validate": "newData.isString() && newData.val().length > 10 && newData.val().length <= 50"
         },
         "respuesta": {
           ".validate": "newData.isString() && newData.val().length > 1 && newData.val().length <= 25"
         },
-        "$other": {
-          ".validate": "false"
-        },
-        ".write": "! data.exists() && auth != null && auth.uid == $id"
+        ".write": "auth != null && auth.uid == $id"
       }
     }
   }

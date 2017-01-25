@@ -7,6 +7,8 @@ ref.on('value', function(ss) {
   var encuesta = ss.val();
   getId('preg').innerHTML = encuesta.pregunta;
   getId('desc').innerHTML = encuesta.descripcion;
+}, function(err) {
+  console.log('error: ', err);
 });
 
 //acceso a una colección
