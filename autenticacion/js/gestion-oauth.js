@@ -27,7 +27,8 @@ function loginOAuth(provider) {
       console.log('login con oauth', user, credential);
       // voy a guardar el perfil del usuario
       guardarPerfil(user.uid, generarObjPerfil());
-    }).catch(function(err) {
+    })
+    .catch(function(err) {
       var errorMessage = err.message;
       //var errorMessage = err.code;
       mensajeFeedback('Error de autenticación: ' + errorMessage);
