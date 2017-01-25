@@ -44,10 +44,11 @@ var botonRegistro = getId('registro');
 if(botonRegistro) {
   botonRegistro.addEventListener('click', function() {
     var user = auth.currentUser;
-    // if(user) {
-    //   mensajeFeedback('Ya estás logueado como usuario, no necesitas registrarte');
-    //   return false;
-    // }
+    //compruebo si hay usuario y no es anónimo
+    if(user && !user.isAnonymous) {
+      mensajeFeedback('Ya estás logueado como usuario, no necesitas registrarte');
+      return false;
+    }
     var nombre = getValue('inputnombre');
     var email = getValue('inputemail');
     var password = getValue('inputpassword');
@@ -55,45 +56,57 @@ if(botonRegistro) {
       mensajeFeedback('Debes completar los datos del formulario');
       return false;
     }
-    var userActual = auth.currentUser;
-    if(userActual) {
-      var credential = firebase.auth.EmailAuthProvider.credential(
-        email, 
-        password
-      );
-      user.link(credential)
-        .then(function() {
-          console.log('todo bien');
-        })
-        .catch(function() {
-          console.log('problema con la credential')
-        });
+    if(user) {
+      convertirUsuarioAnonimo(user, email, password, nombre);
     } else {
-      auth.createUserWithEmailAndPassword(email, password)
-      .then(function(user){
-        user.sendEmailVerification(); 
-        console.log(user);
-        // guardo los datos del usuario en la BBDD
-        guardarPerfil(user.uid, {
-          nombre: nombre,
-          email: email
-        });
-        user.updateProfile({
-          displayName: nombre,
-          datoPirata: 'soy un pirata'
-        }).then( function(){
-          var objUser = generarObjPerfil();
-          mostrarUsuarioActual(objUser); 
-        });
-      })
-      .catch(function(err) {
-        // Handle Errors here.
-        var errorCode = err.code;
-        var errorMessage = err.message;
-        mensajeFeedback('Error: ' + errorCode + ' ' + errorMessage);
-      });
+      crearUsuarioNuevo(email, password, nombre);
     }
   })
+}
+
+function convertirUsuarioAnonimo(userActual, email, password, nombre) {
+  var credential = firebase.auth.EmailAuthProvider.credential(
+    email, 
+    password
+  );
+  userActual.link(credential)
+    .then(function() {
+      console.log('todo bien');
+      guardarPerfilUsuarioNuevo(userActual, nombre, email);
+    })
+    .catch(function(err) {
+      console.log('problema con la credential')
+    });
+}
+
+function crearUsuarioNuevo(email, password, nombre) {
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(function(user){
+      user.sendEmailVerification(); 
+      console.log(user);
+      // guardo los datos del usuario en la BBDD
+      guardarPerfilUsuarioNuevo(user, nombre, email);
+    })
+    .catch(function(err) {
+      // Handle Errors here.
+      var errorCode = err.code;
+      var errorMessage = err.message;
+      mensajeFeedback('Error: ' + errorCode + ' ' + errorMessage);
+    });
+}
+
+function guardarPerfilUsuarioNuevo(user, nombre, email) {
+  guardarPerfil(user.uid, {
+    nombre: nombre,
+    email: email
+  });
+  user.updateProfile({
+    displayName: nombre,
+    datoPirata: 'soy un pirata'
+  }).then( function(){
+    var objUser = generarObjPerfil();
+    mostrarUsuarioActual(objUser); 
+  });
 }
 
 var botonLogin = getId('login');

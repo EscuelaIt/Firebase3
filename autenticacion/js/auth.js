@@ -1,27 +1,9 @@
 // Accedo al servicio de autenticación & BBDD
 var auth = firebase.auth();
 
-function crearUsuarioAnonimo() {
-  auth.signInAnonymously()
-    .then(function(user) {
-      console.log('logueado anonimo', user.uid);
-      var perfil = generarObjPerfil();
-      
-      guardarPerfil(user.uid, perfil);
-    })
-    .catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log('Errr' , errorCode);  
-      // ...
-    });
-}
-
-
 function generarObjPerfil() {
   var user = auth.currentUser;
-  console.log(user);
+  //console.log(user);
   //console.log('voy a crear el objeto a partir de ', user)
   if(user.providerData[0]){
     return {
@@ -48,7 +30,6 @@ auth.onAuthStateChanged(function(user) {
     getId('logouticon').style.display = 'none';
     ocultarUsuarioActual(objUser); 
     console.log('no tengo usuario');
-    crearUsuarioAnonimo();
   }
 });
 

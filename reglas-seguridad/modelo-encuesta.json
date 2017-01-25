@@ -1,0 +1,311 @@
+{
+  "admin" : {
+    "uid_de_otro_usuario_admin" : true,
+    "uid_del_usuario_admin" : true
+  },
+  "encuesta" : {
+    "descripcion" : "test",
+    "importante" : false,
+    "pregunta" : "Esto es un test"
+  },
+  "respuestas" : {
+    "res1" : {
+      "respuesta" : "Hace bastante tiempo, en Internet",
+      "valor" : "Hace bastante"
+    },
+    "res2" : {
+      "respuesta" : "A raíz de su compra por Google",
+      "valor" : "Compra Google"
+    },
+    "res3" : {
+      "respuesta" : "En las conferencias de desarrolladores de Google",
+      "valor" : "Conferencias Google"
+    },
+    "res4" : {
+      "respuesta" : "En Youtube.com",
+      "valor" : "Youtube"
+    },
+    "res5" : {
+      "respuesta" : "En DesarrolloWeb, el año pasado",
+      "valor" : "DesarrolloWeb 2016"
+    },
+    "res6" : {
+      "respuesta" : "Internet en general",
+      "valor" : "Internet"
+    },
+    "res7" : {
+      "respuesta" : "Ahora en EscuelaIT",
+      "valor" : "EscuelaIT"
+    }
+  },
+  "resultados" : {
+    "1A3DXY8dqDdzSYnlp5tCaRhdPUG2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Ariel Tagarelli"
+    },
+    "1a2fhmqyUCffSUMwnnj0GMxVbJr2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Juanjo López"
+    },
+    "1eMcLxYwcnfp1brc6r7q61NvdqX2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "virginia silveira"
+    },
+    "32q1cUuPhAhDUCHNSNhspFoFi3v2" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "LuisArturo Rodriguez"
+    },
+    "3C35u4nSMPaGCq8wExVNPpFCq9n2" : {
+      "respuesta" : "Youtube",
+      "user" : "Liliana Lopez"
+    },
+    "3dr1eVUliYREEVL37RGeYEvFenZ2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Natanael Dominguez"
+    },
+    "4ZeMg9tqCQeKKHamkQ1guCBwqsw1" : {
+      "respuesta" : "Internet",
+      "user" : "jhon freddy perez guerrero"
+    },
+    "6Elkb6YzczeA471WK74VnFSf3XH3" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Arturo Blanco"
+    },
+    "6mnNm63Cp1XH1xiIlALtFfZ7qsj2" : {
+      "respuesta" : "Youtube",
+      "user" : "Mauricio Herrera Rentería"
+    },
+    "7rO3vsPyjyLKJhMLOmbmjTqZtuM2" : {
+      "respuesta" : "Internet",
+      "user" : "Enrique Escalante"
+    },
+    "84u2HJ5ZCTMxzVBEUjTAxCDHfcV2" : {
+      "respuesta" : "Internet",
+      "user" : "Mauricio Herrera"
+    },
+    "8QS7VHn9fuVgLUmFDiRQIRY9oH22" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Norman Avila (neavilag)"
+    },
+    "98CnF8Uw8hhDXHiLJCPpfA60YpA2" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Andrés Quintero"
+    },
+    "9VlzzRcTlHbpnreAWBBiZSG1RTx2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Juan David Gonzalez Piza"
+    },
+    "B0SoyHmGIWVs8PCgKFq2S5DZpH53" : {
+      "respuesta" : "Internet",
+      "user" : "MAXIMILIANO AALMONTE RODRIGUEZ"
+    },
+    "C2m7J4gDRphQz0yAjDqUFyrbq3J3" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Willy Urtecho Pelaez"
+    },
+    "CYrOqaouNMQWqOrOB22v7u0yv8B2" : {
+      "respuesta" : "Youtube",
+      "user" : "Francisco Javier Murillo Vasquez"
+    },
+    "CoOeS2oP2dUa21nQiQh5mb74RY63" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "Daniel Fernández"
+    },
+    "D9be9Vq7J4g1cIWSgncjEpRVW283" : {
+      "respuesta" : "Maraca",
+      "user" : "Matias Zaccaro"
+    },
+    "FklNFkKMbMVw9PgLdMcaLTlQC3K2" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Ribo Salamanca"
+    },
+    "GUCaK8nMFYPQuvD2xymilZlJAv73" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Julian Felipo"
+    },
+    "GWD9ORU2N5Rbd23atDos73xAres1" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "david jofra"
+    },
+    "GzxBeClq6BdRJiD5PQa5qu674J03" : {
+      "respuesta" : "Youtube",
+      "user" : "GeoPalca ::"
+    },
+    "HQ1b1e0yfzZlQNgOywB52XzwpHW2" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "Amartos Mago"
+    },
+    "Jv7P760Xx7VJQETcU2k1IZG3vsj2" : {
+      "respuesta" : "Compra Google",
+      "user" : "Jorge Ledezma"
+    },
+    "MOp8YTGidmPXx525pgxxq6lqGuf2" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "Javi Felices"
+    },
+    "MrdjVd7TA2cmJFp2jK3O2jC35th1" : {
+      "respuesta" : "Compra Google",
+      "user" : "Anthony Bonifacio Alvarez (Tony)"
+    },
+    "NfPOis9ZcEPVxErZPT54AFKAUjx2" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "Bertin Namoc Vega"
+    },
+    "NkaOEW7EbiaNaEpgOiRdALtsA1j2" : {
+      "respuesta" : "Internet",
+      "user" : "Julián Casabón Gracia"
+    },
+    "PSeihN2OEOQSzRnVg58MiJWy19o2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Bryan Muñoz"
+    },
+    "QqfwQtTisjToAV4nQMxR7H7K37X2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Edith Nancy Espinel Bernal"
+    },
+    "RIYIobXmZObirpH15sQNX3bPmA92" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Leonardo Herrada"
+    },
+    "RfKirChR4GfBba8cko0HmO9UxCf2" : {
+      "respuesta" : "Youtube",
+      "user" : "Sergi Garcia"
+    },
+    "SEfA4onYO3RXnsGW5Wsxl8VypM13" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Justo Izquierdo"
+    },
+    "VrQ1cRtnptM7UGtIvpR9tVjKbq03" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Miguel Angel Alvarez Sánchez"
+    },
+    "W5jJyd9yKOak3xgLam6pmSvW4Dj1" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Knoxdj Knoxdj"
+    },
+    "Wn3y5wuhPQXf4PZnBPqhr5gJnEt2" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "Ernesto Cardenas"
+    },
+    "X4K0UKZjiVP4JzCFana3png72Fr2" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Felix Adrian Santiago"
+    },
+    "aC9lUIpZoHbNIeB9tfUNUIkDV9o1" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Juan Manuel Ch"
+    },
+    "bER9bo1C0dMr5Ji9fjoQgZSIl4n2" : {
+      "respuesta" : "Hace bastante",
+      "user" : "Miguel Ángel Concepción Tiza"
+    },
+    "c0QrCU0GYaZcLBIZykNqeo9Fj8L2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Geovanny Pillajo"
+    },
+    "cPhw7N0XrsPZzcw1UgjTK9Hw9IZ2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Tomás Gerardo Guadarrama Sánchez"
+    },
+    "cXdrnSJwwuZxg96EwIAx4QUd3Uh2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Romualdo Vitela"
+    },
+    "dEdhxFxY8phNDUW2nZXPlD7d6zf1" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Gilberto Trujillo"
+    },
+    "hDSZLrTSkgPJheTIP6ODI1m2OE42" : {
+      "respuesta" : "Youtube",
+      "user" : "serg guzman"
+    },
+    "kDqLEYPvhodQtAOLqQCiXQ1ehhP2" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Néstor Angulo de Ugarte"
+    },
+    "kPGtdmrfALcNbWno9rjLf2hnbIr1" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Joaquin Daneri"
+    },
+    "l3zyk4WayGO8NtB1x5NFQJJN4UW2" : {
+      "respuesta" : "Youtube",
+      "user" : "Miguel Angel Alvarez"
+    },
+    "l6CP9AcnrAXygVhWppa7ueasdWg1" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Daniel Hernández"
+    },
+    "m3gSjdnyYdhSoXA5AiqbwE7Jzem2" : {
+      "respuesta" : "Hace bastante",
+      "user" : "Pablo Alejandro Suchmans"
+    },
+    "mFbeHkJFTVMy0CWaA0NozlM34Pp2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Jose Valencia Michimani"
+    },
+    "nlk3rnx7JfPflNf3U6P2mxkgzbQ2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Víctor de Andrés Espinosa"
+    },
+    "ooDOgRL7J4h4FuvJGAU8jtmDQQP2" : {
+      "respuesta" : "DesarrolloWeb 2016",
+      "user" : "J Carlos S Garcia"
+    },
+    "qkpc0z6MfXUrMtp1xbSnfe0y4p72" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Rubén Pérez López"
+    },
+    "qwaW6LDjQYXjzK80wmft4xlT93K3" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Alberto Garcia Vegas"
+    },
+    "rFNf9JOQbwPUD7dr5h8tcM99H203" : {
+      "respuesta" : "Compra Google",
+      "user" : "jorge sanjuas"
+    },
+    "sJt23xzwZoXk5LyDnYBYIdTJTi32" : {
+      "respuesta" : "Internet",
+      "user" : "Alberto Lago"
+    },
+    "sRxQJncKOybP6qYBF3ciZmuLb4K3" : {
+      "respuesta" : "Compra Google",
+      "user" : "Martin Diaz"
+    },
+    "tGb5Kmoa14ViVzuo8rvLYCaSpVu1" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Luis Pielagos"
+    },
+    "u4LSrUrkA6R2i8SjrukNkZWq8pz2" : {
+      "respuesta" : "Internet",
+      "user" : "SALINAS RAMIREZ DIEGO FERNANDO"
+    },
+    "uIHC21Sl2kRM8MglCcIw1N0RuWL2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Luis Alberto Soria"
+    },
+    "uperxrKQeJRv2PEWW5ElXG0UYQy2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "Jose Quijado"
+    },
+    "vO0TZQQ3xwXpLs7f5WiHO68aeGN2" : {
+      "respuesta" : "Internet",
+      "user" : "Diego Bosín"
+    },
+    "wwZ20F3tTHVF0B4kisk8g0DoFom1" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Juan Berrios"
+    },
+    "x1NKACCQd9QQlx498P7oNwiG29j2" : {
+      "respuesta" : "Conferencias Google",
+      "user" : "Alex Numpaque"
+    },
+    "zDgGy7XeenhRVFFbRmnXp7TsM3p1" : {
+      "respuesta" : "Internet",
+      "user" : "Ángela Tovar"
+    },
+    "zuwA4caNftZ8SMtBVjtgIJHb7df2" : {
+      "respuesta" : "EscuelaIT",
+      "user" : "MIGUEL ANGEL BLANCO"
+    }
+  }
+}
