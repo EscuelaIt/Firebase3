@@ -1,0 +1,64 @@
+///// TIPOS EXTENDIDOS
+
+type ShortString extends String {
+  validate() {this.length > 1 && this.length <= 25}
+}
+type LongString extends String {
+  validate() {this.length <= 250}
+}
+type UserString extends String {
+  validate() {this.length <= 100}
+}
+
+///// ESQUEMAS
+
+type Resultado {
+  user: UserString,
+  respuesta: ShortString
+}
+
+type Encuesta {
+  pregunta: LongString,
+  descripcion: LongString,
+  importante: Boolean | Null
+}
+
+type Respuesta {
+  respuesta: LongString,
+  valor: ShortString
+}
+
+///// FUNCIONES
+
+esUsuario(id) {
+  auth != null && auth.uid == id
+}
+
+esAdmin() {
+  auth != null && root.admins[auth.uid] == true
+}
+
+///// PATHS
+
+path /encuesta is Encuesta
+{
+  read() { true }
+  write() { esAdmin() }
+}
+
+path /respuestas is Respuesta[]
+{
+  read() { true }
+  write() { esAdmin() }  
+}
+
+path /resultados is Any
+{
+  read() { true }  
+}
+
+path /resultados/{id} is Resultado
+{
+  create() { esUsuario(id) }
+  update() { esUsuario(id) }
+}

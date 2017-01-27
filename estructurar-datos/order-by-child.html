@@ -25,7 +25,7 @@
   var pregunta = 'pregunta1';
   var database = firebase.database();
   var ref = database.ref('modelos_datos/faq/propuesta3/respuestas').child(pregunta);
-  ref = ref.orderByChild('votos'); //.limitToLast(1);
+  ref = ref.orderByChild('votos').limitToLast(1);
   //console.log(ref.ref)
   ref.on('child_added', function(ss) {
     var respuesta = ss.val();

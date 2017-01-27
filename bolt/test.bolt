@@ -1,0 +1,16 @@
+type Punto{
+  x: Number,
+  y: Number
+}
+
+type Poligono {
+  desplazamiento: Punto | Null,
+  color: String | Null,
+  puntos: Punto[]
+}
+
+path /poligonos/{idpol} is Poligono {
+  read() { true }
+  write() { true }
+  validate() { this.puntos.length >= 3 }
+}

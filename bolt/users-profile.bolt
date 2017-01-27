@@ -1,0 +1,26 @@
+type NameString extends String {
+  validate() {this.length > 1 && this.length <= 25}
+}
+type LongString extends String {
+  validate() {this.length <= 350}
+}
+//http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+type EmailString extends String {
+  validate() {this.test(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)}
+}
+
+type User {
+  email: EmailString,
+  nombre: NameString,
+  photoURL: LongString
+}
+
+esUsuario(id) {
+  auth != null && auth.uid == id
+}
+
+path /users/{id} is User
+{
+  read() { true }
+  write() { esUsuario(id) }
+}

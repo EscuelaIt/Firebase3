@@ -1,0 +1,54 @@
+{
+  "rules": {
+    "encuesta": {
+      ".validate": "newData.hasChildren(['pregunta', 'descripcion'])",
+      "pregunta": {
+        ".validate": "newData.isString() && newData.val().length <= 250"
+      },
+      "descripcion": {
+        ".validate": "newData.isString() && newData.val().length <= 250"
+      },
+      "importante": {
+        ".validate": "newData.isBoolean()"
+      },
+      "$other": {
+        ".validate": "false"
+      },
+      ".read": "true",
+      ".write": "auth != null && newData.parent().child('admins').child(auth.uid).val() == true"
+    },
+    "respuestas": {
+      "$key1": {
+        ".validate": "newData.hasChildren(['respuesta', 'valor'])",
+        "respuesta": {
+          ".validate": "newData.isString() && newData.val().length <= 250"
+        },
+        "valor": {
+          ".validate": "newData.isString() && newData.val().length > 1 && newData.val().length <= 25"
+        },
+        "$other": {
+          ".validate": "false"
+        }
+      },
+      ".validate": "newData.hasChildren()",
+      ".read": "true",
+      ".write": "auth != null && newData.parent().child('admins').child(auth.uid).val() == true"
+    },
+    "resultados": {
+      ".read": "true",
+      "$id": {
+        ".validate": "newData.hasChildren(['user', 'respuesta'])",
+        "user": {
+          ".validate": "newData.isString() && newData.val().length <= 100"
+        },
+        "respuesta": {
+          ".validate": "newData.isString() && newData.val().length > 1 && newData.val().length <= 25"
+        },
+        "$other": {
+          ".validate": "false"
+        },
+        ".write": "data.val() == null && (auth != null && auth.uid == $id) || data.val() != null && newData.val() != null && (auth != null && auth.uid == $id)"
+      }
+    }
+  }
+}

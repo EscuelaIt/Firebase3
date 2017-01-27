@@ -1,0 +1,84 @@
+///// TIPOS EXTENDIDOS
+
+type ShortString extends String {
+  validate() {this.length > 1 && this.length <= 25}
+}
+type LongString extends String {
+  validate() {this.length <= 250}
+}
+
+//http://stackoverflow.com/questions/8937408/regular-expression-for-date-format-dd-mm-yyyy-in-javascript
+type Date extends String {
+  validate() {this.test(/^(\d{1,2})-(\d{1,2})-(\d{4})$/)}
+}
+
+//http://stackoverflow.com/questions/46155/validate-email-address-in-javascript
+type EmailString extends String {
+  validate() {this.test(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)}
+}
+
+///// ESQUEMAS
+
+type Curso {
+  informacion: LongString,
+  nombre: LongString
+}
+
+type Clase {
+  date: Date,
+  description: LongString,
+  title: LongString
+}
+
+type Usuario {
+  apellidos: ShortString,
+  nombre: ShortString,
+  email: EmailString
+}
+
+type UserID extends String{
+  validate() { root.usuarios[this] != null }
+}
+
+type CursoID extends String{
+  validate() { root.cursos[this] != null }
+}
+
+///// FUNCIONES
+
+esUsuario(id) {
+  auth != null && auth.uid == id
+}
+
+estaSuscrito(curso) {
+  auth != null && root.estudiantes[curso][auth.uid] == true
+}
+
+///// PATHS
+
+path /cursos/{idcurso} is Curso
+{
+  read() { estaSuscrito(idcurso) }
+}
+
+path /clases/{idcurso}/{idclase} is Clase
+{
+  read() { estaSuscrito(idcurso) }
+}
+
+path /estudiantes/{idcurso}/{idusuario} is Boolean
+{
+
+}
+
+path /usuariosSuscritos/{idusuario} is Map<CursoID, Boolean> | Null
+// path /usuariosSuscritos/{idusuario} is Any
+{
+  read() { esUsuario(idusuario) }
+  //write() { true }
+}
+
+path /usuarios/{idusuario} is Usuario
+{
+
+}

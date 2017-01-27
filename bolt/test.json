@@ -1,0 +1,44 @@
+{
+  "rules": {
+    "poligonos": {
+      "$idpol": {
+        ".validate": "newData.hasChildren() && newData.child('puntos').val().length >= 3",
+        "desplazamiento": {
+          ".validate": "newData.hasChildren() && newData.hasChildren(['x', 'y'])",
+          "x": {
+            ".validate": "newData.isNumber()"
+          },
+          "y": {
+            ".validate": "newData.isNumber()"
+          },
+          "$other": {
+            ".validate": "false"
+          }
+        },
+        "color": {
+          ".validate": "newData.isString()"
+        },
+        "puntos": {
+          "$key1": {
+            ".validate": "newData.hasChildren(['x', 'y'])",
+            "x": {
+              ".validate": "newData.isNumber()"
+            },
+            "y": {
+              ".validate": "newData.isNumber()"
+            },
+            "$other": {
+              ".validate": "false"
+            }
+          },
+          ".validate": "newData.hasChildren()"
+        },
+        "$other": {
+          ".validate": "false"
+        },
+        ".read": "true",
+        ".write": "true"
+      }
+    }
+  }
+}
