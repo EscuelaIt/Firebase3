@@ -15,7 +15,10 @@
         ".validate": "false"
       },
       ".read": "true",
-      ".write": "auth != null && newData.parent().child('admins').child(auth.uid).val() == true"
+      ".write": "auth != null && newData.parent().child('admins').child(auth.uid).val() == true",
+      ".indexOn": [
+        "importante"
+      ]
     },
     "respuestas": {
       "$key1": {

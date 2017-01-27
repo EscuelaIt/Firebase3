@@ -19,8 +19,12 @@ esUsuario(id) {
   auth != null && auth.uid == id
 }
 
-path /users/{id} is User
+path /users is Any
 {
   read() { true }
+}
+
+path /users/{id} is User
+{
   write() { esUsuario(id) }
 }

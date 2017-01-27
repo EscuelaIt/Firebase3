@@ -1,0 +1,73 @@
+{
+  "rules": {
+    "cursos": {
+      "$idcurso": {
+        ".validate": "newData.hasChildren(['informacion', 'nombre'])",
+        "informacion": {
+          ".validate": "newData.isString() && newData.val().length <= 250"
+        },
+        "nombre": {
+          ".validate": "newData.isString() && newData.val().length <= 250"
+        },
+        "$other": {
+          ".validate": "false"
+        },
+        ".read": "auth != null && root.child('estudiantes').child($idcurso).child(auth.uid).val() == true"
+      }
+    },
+    "clases": {
+      "$idcurso": {
+        "$idclase": {
+          ".validate": "newData.hasChildren(['date', 'description', 'title'])",
+          "date": {
+            ".validate": "newData.isString() && newData.val().matches(/^(\\d{1,2})-(\\d{1,2})-(\\d{4})$/)"
+          },
+          "description": {
+            ".validate": "newData.isString() && newData.val().length <= 250"
+          },
+          "title": {
+            ".validate": "newData.isString() && newData.val().length <= 250"
+          },
+          "$other": {
+            ".validate": "false"
+          },
+          ".read": "auth != null && root.child('estudiantes').child($idcurso).child(auth.uid).val() == true"
+        }
+      }
+    },
+    "estudiantes": {
+      "$idcurso": {
+        "$idusuario": {
+          ".validate": "newData.isBoolean()"
+        }
+      }
+    },
+    "usuariosSuscritos": {
+      "$idusuario": {
+        "$key1": {
+          ".validate": "newData.parent().parent().parent().child('cursos').child($key1).val() != null && newData.isBoolean()"
+        },
+        ".validate": "newData.hasChildren()",
+        ".read": "auth != null && auth.uid == $idusuario",
+        ".write": "true"
+      }
+    },
+    "usuarios": {
+      "$idusuario": {
+        ".validate": "newData.hasChildren(['apellidos', 'nombre', 'email'])",
+        "apellidos": {
+          ".validate": "newData.isString() && newData.val().length > 1 && newData.val().length <= 25"
+        },
+        "nombre": {
+          ".validate": "newData.isString() && newData.val().length > 1 && newData.val().length <= 25"
+        },
+        "email": {
+          ".validate": "newData.isString() && newData.val().matches(/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)"
+        },
+        "$other": {
+          ".validate": "false"
+        }
+      }
+    }
+  }
+}

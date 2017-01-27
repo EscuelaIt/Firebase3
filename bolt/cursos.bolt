@@ -36,9 +36,9 @@ type Usuario {
   email: EmailString
 }
 
-type UserID extends String{
-  validate() { root.usuarios[this] != null }
-}
+//type UserID extends String{
+//  validate() { root.usuarios[this] != null }
+//}
 
 type CursoID extends String{
   validate() { root.cursos[this] != null }
@@ -75,7 +75,7 @@ path /usuariosSuscritos/{idusuario} is Map<CursoID, Boolean> | Null
 // path /usuariosSuscritos/{idusuario} is Any
 {
   read() { esUsuario(idusuario) }
-  //write() { true }
+  write() { true }
 }
 
 path /usuarios/{idusuario} is Usuario

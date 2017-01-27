@@ -1,0 +1,27 @@
+{
+  "rules": {
+    "users": {
+      "$key1": {
+        ".validate": "newData.hasChildren(['email', 'nombre', 'photoURL'])",
+        "email": {
+          ".validate": "newData.isString() && newData.val().matches(/^(([^<>()\\[\\]\\\\.,;:\\s@\"]+(\\.[^<>()\\[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$/)"
+        },
+        "nombre": {
+          ".validate": "newData.isString() && newData.val().length > 1 && newData.val().length <= 25"
+        },
+        "photoURL": {
+          ".validate": "newData.isString() && newData.val().length <= 350"
+        },
+        "$other": {
+          ".validate": "false"
+        }
+      },
+      ".validate": "newData.hasChildren()",
+      ".read": "true",
+      "$id": {
+        ".validate": "true",
+        ".write": "auth != null && auth.uid == $id"
+      }
+    }
+  }
+}

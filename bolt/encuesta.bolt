@@ -44,6 +44,7 @@ path /encuesta is Encuesta
 {
   read() { true }
   write() { esAdmin() }
+  index() { ["importante"] }
 }
 
 path /respuestas is Respuesta[]
