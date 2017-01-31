@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test de descarga de archivo</title>
+</head>
+<body>
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script src="js/inicializar-firebase.js"></script>
+  <script>
+  var storage = firebase.storage();
+  
+  var ref = storage.ref('images/avatar/YWFS0GByjbVCLJ6AkxpEEaLtsPl1/64x64.png');
+  ref.getDownloadURL()
+    .then(function(url) {
+      console.log(url);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+
+
+  </script>
+</body>
+</html>
