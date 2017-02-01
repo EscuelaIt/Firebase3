@@ -64,7 +64,33 @@ function subirArchivo(file) {
   
 }
 
+getId('bpause').addEventListener('click', function() {
+  console.log('parar', uploadTask.snapshot.state)
+  if(uploadTask && uploadTask.snapshot.state == 'running') {
+    
+    uploadTask.pause();
+    
+    getId('mensajeupload').textContent = '(pausada)';    
+  }
+});
 
+getId('bresume').addEventListener('click', function() {
+  if(uploadTask && uploadTask.snapshot.state == 'paused') {
+    uploadTask.resume();
+    getId('mensajeupload').textContent = '';        
+  }
+});
+
+
+getId('bcancel').addEventListener('click', function() {
+  if(uploadTask && (uploadTask.snapshot.state == 'paused' || uploadTask.snapshot.state == 'running')) {
+    if(uploadTask.snapshot.state == 'paused') {
+      uploadTask.resume();
+    }
+    uploadTask.cancel();
+    getId('mensajeupload').textContent = '(cancelada)';        
+  }
+});
 
 
 function tipoValido(tipo) {
