@@ -1,0 +1,241 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 15px 0;
+  color: #333;
+  background-color: #f5f5f5;
+  display : flex;
+  justify-content: center;
+}
+
+header{
+  display : flex;
+  justify-content: space-between;
+}
+
+input {
+  padding: 5px;
+  font-size: 1em;
+}
+
+#usericon, #logouticon {
+  margin: 11px 10px 0 0;
+}
+
+#logouticon {
+  display: none;
+}
+
+@media(min-width: 490px) {
+  .contenido {
+    width: 450px;
+  }
+}
+.contenido {
+  min-width: 300px;
+  max-width: 450px;
+}
+
+.caja {
+  padding: 0;
+  box-shadow: 2px 2px 2px #ccc;
+  background: #fff;
+}
+
+.titular {
+  background-color: #0288d1;
+  color: #fff;
+  font-size: 1.2em;
+  margin-bottom: 10px; 
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+#up, #down{
+  margin-top: 4px;
+}
+#down {
+  display: none;
+}
+
+.descrip {
+  margin-top: 0;
+  font-size: 1em;
+  color: #666;
+  padding: 10px 0;
+}
+
+.encuesta {
+  padding: 0 15px 15px 15px;
+}
+.encuesta ul {
+  list-style-type: none;
+  margin: 20px 0;
+  padding: 0;
+  line-height: 1.5em;
+}
+
+.boton {
+  padding: 10px 15px;
+  box-shadow: 4px 4px 6px #ccc;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  display: inline-block;
+  background-color: #ffa611;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+#mensaje {
+  width: 180px;
+  padding: 15px;
+  background-color: #555;
+  color: #fff;
+  border: 5px solid #fff;
+  box-shadow: 8px 8px 8px #aaa;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: .8em;
+  display: none;
+}
+
+#resultados {
+  margin-top: 20px;
+}
+#sinrespuestas{
+  margin-left: 5px
+}
+
+article {
+  box-shadow: 1px 1px 1px #aaa;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 12px;
+}
+article b, article i{
+  display: block;
+}
+article b {
+  margin-bottom: 7px;
+  font-size: .8em;
+}
+article span {
+  font-weight: normal;
+}
+
+#listadorespuestas{
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+#listadorespuestas li{
+  margin-bottom: 10px;
+}
+
+.beditar{
+  margin-right: 10px;
+  background-color: #0288d1;
+  color: #fff;
+  font-size: .8em;
+}
+
+.bborrar{
+  margin-right: 10px;
+  background-color: #ff4631;
+  color: #fff;
+  font-size: .8em;
+}
+
+nav {
+  margin: 15px 0;
+}
+nav a {
+  color: #0288d1;
+}
+#logingoogle, #loginfacebook{
+  width: 165px;
+  text-align: center;
+}
+
+#logingoogle{
+  background-color: #ff4631;
+}
+#loginfacebook{
+  background-color: #0258c1;  
+}
+#botonesoauth {
+  margin-top: 33px;
+  width: 200px;
+}
+
+.interfazlogin {
+  display : flex;
+  justify-content: space-between;
+}
+.recordar {
+  display: block;
+  margin: 3px 0 0 3px;
+  font-size: .85em;
+  color: #0288d1;
+}
+#datosusuario {
+  display: none;
+}
+
+.bloque {
+  margin-top: 30px;
+}
+
+#estadosubida {
+  margin: 10px 0;
+  font-size: .9em;
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  display: none;
+  align-items: strech;
+  width: 100%;
+}
+#estadosubida span {
+  margin-right: 5px;
+}
+#controlesupload {
+  flex-grow: 3;
+  text-align: right;
+}
+.bupload {
+  display: inline-block;
+  padding: 3px 5px;
+  background-color: #ddd;
+  border-radius: 4px;
+  font-size: .75em;
+  font-weight: bold;
+  color: #0288d1;
+}
+
+#contimagen {
+  display: none;
+  width: 64px;
+  margin: 10px 20px 0 0;
+}
+
+#useravatar {
+  width: 64px;
+  height: 64px;
+}
+
+#datosusuario .encuesta {
+  display : flex;
+}
+
+#token {
+  font-size: .75em;
+  word-break: break-all;
+}
+
+#comando{
+  display: none;
+  font-size: .75em;
+  word-break: break-all;
+}

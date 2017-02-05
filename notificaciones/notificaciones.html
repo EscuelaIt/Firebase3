@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Firebase 3 notificaciones</title>
+  <link rel="stylesheet" href="estilo.css">
+
+</head>
+<body>
+  <div class="contenido">
+    <header>
+      <img src="images/logo-firebase.png" alt="Firebase 3" width="190" height="62">     
+      <img src="images/salir.png" alt="Logout" width="50" height="50" id="logouticon">      
+    </header>
+    <nav>
+      <a href="index.html">Login</a>
+    </nav>
+    <div class="caja">
+      <p class="titular">
+        <span id="preg">Notificaciones</span>
+        <img src="images/up.png" alt="Colapsar encuesta" width="24" height="24" id="up">
+        <img src="images/down.png" alt="Mostrar encuesta" width="24" height="24" id="down">
+      </p>
+      <section class="encuesta" id="cuerpoencuesta">
+        <div id="solicitarpermiso" class="boton">Solicitar permiso</div>
+        <div id="token"></div>
+      </section>
+    </div>
+
+    <div class="bloque" id="comando">
+      <div class="titular">
+        Comando para enviar notificaciones
+      </div>
+      <section class="encuesta token">
+        curl https://fcm.googleapis.com/fcm/send --header "Authorization:key=<span id="key">[TU_KEY]</span>" --header "Content-Type:application/json" -d '{ "notification": { "title": "Hey amigo, lee esto!", "body": "Felicidades!! Has recibido una gloriosa notificación", "icon": "/notificaciones/images/user-icon.png" }, "to" : "<span id="totoken">[TOKEN_DESTINATARIO]</span>" }'
+      </section>
+      <section class="encuesta token">
+        curl https://fcm.googleapis.com/fcm/send --header "Authorization:key=<span id="key2">[TU_KEY]</span>" --header "Content-Type:application/json" -d '{ "data": {"score": "5x1","time": "15:10"},"to" : "<span id="totoken2">[TOKEN_DESTINATARIO]</span>"}'
+      </section>
+    </div>
+    
+  <div id="mensaje"></div>
+
+
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script src="js/inicializar-firebase.js"></script>
+  <script src="js/funciones.js"></script>
+  <script src="js/notification.js"></script>
+</body>
+</html>
